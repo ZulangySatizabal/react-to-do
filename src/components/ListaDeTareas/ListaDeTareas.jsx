@@ -8,13 +8,12 @@ function ListaDeTareas() {
   const [tareas, setTareas] = useState([]);
 
   const agregarTarea = tarea => {
-    console.log(tarea);
     //verificando que el texto de la tarea no este vacio
     if(tarea.texto.trim()){
       //trim es un metodo que permite quitar espacios al principio a al final de un string
       tarea.texto = tarea.texto.trim();
       //Arreglo donde estan todas las tareas y se agrega la nueva de primera
-      const tareasActualizadas = [tareas, ...tareas];
+      const tareasActualizadas = [tarea, ...tareas];
       setTareas(tareasActualizadas);
     }
   }
@@ -27,14 +26,14 @@ function ListaDeTareas() {
       <div className='list_task_cont'>
         {
           tareas.map((tarea) => (
-            tarea.id ? (
+            
             <Tarea 
               key={tarea.id} //Key no es un prop pero es necesario 
               id={tarea.id}
               texto={tarea.texto} 
               completada={tarea.completada}
             />
-            ) : null
+            
           ))
         }
       </div>
