@@ -1,0 +1,6 @@
+.list_task_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}

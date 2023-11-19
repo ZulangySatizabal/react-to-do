@@ -1,0 +1,17 @@
+.logo_contenedor{
+    width: 100%;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo{
+    height: 50px;
+}
+
+.title{
+    margin-top: 15px;
+    font-family: Lato, sans-serif;
+}
