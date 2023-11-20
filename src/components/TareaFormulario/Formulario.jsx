@@ -8,7 +8,7 @@ function Formulario(props) {
 
     const manejarCambio = e => {
         setInput(e.target.value); //Extrae el valor del campo de texto
-    }
+    };
 
     const manejarEnvio = e => {
         e.preventDefault(); //Evita que se recargue la app
@@ -17,10 +17,10 @@ function Formulario(props) {
             id: uuidv4(), //Genera un identificador unico
             texto: input,
             completada: false
-        }
+        };
 
         props.onSubmit(tareaNueva);
-    }
+    };
 
   return (
     <form className='task_form' onSubmit={manejarEnvio}>
