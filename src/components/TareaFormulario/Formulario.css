@@ -11,7 +11,7 @@
     background-color: #fff;
     padding: 14px 32px 14px 16px;
     border-radius: 4px 0 0 4px;
-    border: 2px solid #00471b;
+    border: 2px solid #090914;
     outline: none;
 }
 
@@ -23,7 +23,36 @@
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     outline: none;
-    background-color: #00471b;
+    background-color: #090914;
     color: #fff;
     text-transform: capitalize;
+}
+
+/* estilo responsivo */
+@media screen and (max-width: 768px){
+    .task_input{
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 16px;
+    }
+
+    .task_btn{
+        width: 100%;
+        border-radius: 4px;
+    }
+}
+
+/* estilos adicionales para dispositivos móviles */
+@media screen and (max-width: 480px){
+    .task_form{
+        flex-direction: column;
+    }
+
+    .task_input{
+        padding: 14px 16px;
+    }
+
+    .task_btn{
+        padding: 12px;
+    }
 }

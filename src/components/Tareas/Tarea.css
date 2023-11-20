@@ -1,46 +1,70 @@
 .task_container{
-  width: 500px;
-  min-height: 65px;
-  background-color: #1b1b32;
-  margin: 5px 0;
-  padding: 8px 15px 8px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid #fff;
-  cursor: pointer;
+    width: 500px;
+    min-height: 65px;
+    margin: 5px 0;
+    padding: 8px 15px 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    cursor: pointer;
 }
 
 /* estilo degrade tareas */
 .task_container:nth-child(3n + 1){
-    background-color: #1b1b32;
+        background-color: #95125c;
 }
 .task_container:nth-child(3n + 2){
-    background-color: #2a2a40;
+        background-color: #ad2a72;
 }
 .task_container:nth-child(3n + 3){
-    background-color: #3b3b4f;
+        background-color: #c64189;
 }
 
 .task_text{
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    overflow-wrap: anywhere; /*Si el texto es muy largo, se baja a la siguiente line*/
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        overflow-wrap: anywhere; /*Si el texto es muy largo, se baja a la siguiente line*/
 }
 
 .task_icon{
-    width: 25px;
-    height: 25px;
-    margin: 5px;
+        width: 25px;
+        height: 25px;
+        margin: 5px;
 }
 
 /* Tarea completada */
 .task_container.checked{
-    background-color: #5a01a7;
-    text-decoration: line-through;
+        background-color: #292228;
+        text-decoration: line-through;
 }
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .task_container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .task_container {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    .task_text {
+        font-size: 16px;
+        margin-right: auto;
+    }
+    
+    .task_icon {
+        margin: 5px auto;
+    }
+}
+
